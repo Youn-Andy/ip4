@@ -8,7 +8,7 @@
     height: 100vh;
 }
 
-.landing-text{
+.landing-text {
     position: absolute;
     text-align: center;
     font-size: larger;
@@ -17,6 +17,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color:black;
-    
+    color: black;
+
+}
+
+#h-b img {
+    width: 50vh;
+    height: 50vh;
+}
+
+#hero img {
+    width: 50vh;
+    height: 50vh;
+}
+#image2 img{
+    width: 50vh;
+    height: 50vh;
 }
