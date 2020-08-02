@@ -1,5 +1,5 @@
 .landing-page {
-    background-image: url("/images/h-b.jpg");
+    background-image: url("/images/hero1.jpg");
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,7 +11,12 @@
 .landing-text{
     position: absolute;
     text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    font-style: normal;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color:black;
+    
 }
