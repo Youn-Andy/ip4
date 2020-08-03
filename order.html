@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Now</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Now</title>
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="order.html">Order Now</a>
@@ -34,56 +34,94 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-4" id="h-b">
-                <img src="/images/h-b.jpg" alt="">
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        Choose Pizza Size
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Small=kshs 800</a>
-                        <a class="dropdown-item" href="#">Medium=kshs 1000</a>
-                        <a class="dropdown-item" href="#">Large=kshs 1200</a>
+            <div class="col-md-3">
+                <div class="well" id="leftCol">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    <div class="form-group">
+                        <form id="pizzaOrder">
+                            <label for="size">Choose Your Size of Pizza:</label>
+                            <select class="form-control" id="size">
+                                <option value=8.00>Small: Kshs800</option>
+                                <option value=11.00>Medium: Kshs1100</option>
+                                <option value=13.00>Large: Kshs1300</option>
+                                <option value=14.00>Extra-Large: Kshs1400</option>
+                            </select>
+                            <label for="toppings1">Choose Your First Topping:</label>
+                            <select class="form-control" id="toppings1">
+                                <option value=0>Plain (Just Cheese and sauce)</option>
+                                <option value=2.00>Pepperoni (+Kshs200)</option>
+                                <option value=2.00>Sausage (+Kshs200)</option>
+                                <option value=2.50>Capicola (+Kshs250)</option>
+                                <option value=2.50>Anchovies (+Kshs250)</option>
+                                <option value=1.50>Mushrooms (+Kshs150)</option>
+                                <option value=1.50>Onions (+150)</option>
+                                <option value=1.50>Green Peppers (+150)</option>
+                                <option value=1.50>Arugula (+150)</option>
+                                <option value=1.50>Green Olives (+150)</option>
+                            </select>
+                            <label for="toppings2">Second Topping:</label>
+                            <select class="form-control" id="toppings2">
+                                <option value=0>none</option>
+                                <option value=2.00>Pepperoni (+Kshs200)</option>
+                                <option value=2.00>Sausage (+Kshs200)</option>
+                                <option value=2.50>Capicola (+Kshs250)</option>
+                                <option value=2.50>Anchovies (+Kshs250)</option>
+                                <option value=1.50>Mushrooms (+150)</option>
+                                <option value=1.50>Onions (+150)</option>
+                                <option value=1.50>Green Peppers (+150)</option>
+                                <option value=1.50>Arugula (+150)</option>
+                                <option value=1.50>Green Olives (+150)</option>
+                            </select>
+                            <label for="toppings3">Third Topping:</label>
+                            <select class="form-control" id="toppings3">
+                                <option value=0>none</option>
+                                <option value=2.00>Pepperoni (+Kshs200)</option>
+                                <option value=2.00>Sausage (+Kshs200)</option>
+                                <option value=2.50>Capicola (+Kshs250)</option>
+                                <option value=2.50>Anchovies (+Kshs250)</option>
+                                <option value=1.50>Mushrooms (+150)</option>
+                                <option value=1.50>Onions (+150)</option>
+                                <option value=1.50>Green Peppers (+150)</option>
+                                <option value=1.50>Arugula (+150)</option>
+                                <option value=1.50>Green Olives (+150)</option>
+                            </select>
+                            <label for="toppings4">Fourth Topping:</label>
+                            <select class="form-control" id="toppings4">
+                                <option value=0>none</option>
+                                <option value=2.00>Pepperoni (+Kshs200)</option>
+                                <option value=2.00>Sausage (+Kshs200)</option>
+                                <option value=2.50>Capicola (+Kshs250)</option>
+                                <option value=2.50>Anchovies (+Kshs250)</option>
+                                <option value=1.50>Mushrooms (+150)</option>
+                                <option value=1.50>Onions (+150)</option>
+                                <option value=1.50>Green Peppers (+150)</option>
+                                <option value=1.50>Arugula (+150)</option>
+                                <option value=1.50>Green Olives (+150)</option>
+                            </select>
+                            <button type="submit" class="btn btn-success" id="orderButton">Get Price</button>
+                            <button type="button" class="btn btn-danger" value="Refresh Page"
+                                onClick="window.location.reload()" id="cancelButton">Cancel</button>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="col-4" id="hero">
-                <img src="/images/hero.jpg" alt="">
+            <div class="col-md-3">
+                <div class="well" id="rightCol">
+                </div>
             </div>
-            <div class="col-4" id="image2">
-                <img src="/images/image2.jpg" alt="">
+        </div>
+        <div id="customerOrder">
+            <div class="well" id="displayWell">
+                <h1 class="orderTitle">Your Pizza Total:</h1>
+                <ul>
+
+                </ul>
             </div>
         </div>
     </div>
-    <div id="form1">
-        <div id="form-text1">
-            <form action="">
-                <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" placeholder="Enter email" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" placeholder="Enter name" id="name">
-                </div>
-                <div class="form-group">
-                    <label for="location">Location:</label>
-                    <input type="text" class="form-control" placeholder="Enter location" id="location">
-                </div>
-                <div class="form-group">
-                    <label for="number">Phone Number:</label>
-                    <input type="number" class="form-control" placeholder="Enter phone number" id="number">
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox"> Remember me
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-
-        </div>
-
     </div>
 </body>
 
