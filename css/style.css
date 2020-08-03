@@ -105,3 +105,8 @@ label {
     font-family: times;
     font-family: 'Comfortaa', cursive;
 }
+footer{
+    background-color:rgb(53, 53, 175);
+    text-align: center;
+    font-size: large;
+}
