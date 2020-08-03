@@ -22,11 +22,11 @@ $(document).ready(function () {
         var toppings3 = parseFloat($("#toppings3").val());
         var toppings4 = parseFloat($("#toppings4").val());
 
-        var userPizza = new Pizza(size, toppings1, toppings2, toppings3, toppings4);
+        var userPizza = new Pizza(size, crust, toppings1, toppings2, toppings3, toppings4);
 
         $("#customerOrder").slideToggle(500);
-        $("ul").append("<li>" + "$" + userPizza.price().toFixed(2) + "</li>");
+        $("ul").append("<li>" + "Kshs" + userPizza.price().toFixed(2) + "</li>");
         $("li").remove();
-        $("ul").append("<li>" + "$" + userPizza.price().toFixed(2) + "</li>");
+        $("ul").append("<li>" + "Kshs" + userPizza.price().toFixed(2) + "</li>");
     });
 });
